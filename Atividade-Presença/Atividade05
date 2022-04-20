@@ -1,1 +1,35 @@
+public class Cachorro{
 
+            public String nome;
+
+            public float peso;
+
+            public float altura;
+
+            public String cor;
+
+ 
+
+            void pular {
+
+                        if (altura >= 80){
+
+                                    System.out.println(“Seu cachorro pula alto”);
+
+                        }
+
+                        if (altura < 80 || altura >= 50{
+
+                                    System.out.println(“Seu cachorro pula normalmente”)
+
+                        }
+
+                        else{
+
+                                    System.out.println(“Seu cachorro pula baixo”)
+
+}
+
+}
+
+}
