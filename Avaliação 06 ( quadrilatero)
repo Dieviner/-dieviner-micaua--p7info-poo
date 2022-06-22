@@ -1,0 +1,59 @@
+import  {  Ponto  }  de  "./Ponto" ;
+
+exportar  classe  Quadrilátero  {
+    privado  x1 : Número ;
+    privado  x2 : Número ;
+    privado  y1 : Número ;
+    privado  y2 : Número ;
+
+    construtor ( x1 : Número ,  x2 : Número ,  y1 : Número ,  y2 : Número )  {
+        isso . x1  =  x1 ;
+        isso . x2  =  x2 ;
+        isso . y1  =  y1 ;
+        isso . y2  =  y2 ;
+    }
+
+    public  getX1 ( ) : Número  {
+        devolva  isso . x1 ;
+    }
+
+    público  setX1 ( x1 : Número )  {
+        isso . x1  =  x1 ;
+    }
+
+    public  getY1 ( ) : Número  {
+        devolva  isso . y1 ;
+    }
+
+    público  setY1 ( y1 : Número )  {
+        isso . y1  =  y1 ;
+    }
+
+    public  getX2 ( ) : Número  {
+        devolva  isso . x2 ;
+    }
+
+    público  setX2 ( x2 : Número )  {
+        isso . x2  =  x2 ;
+    }
+
+    public  getY2 ( ) : Número  {
+        devolva  isso . y2 ;
+    }
+
+    público  setY2 ( y2 : Número )  {
+        isso . y2  =  y2 ;
+    }
+
+    public  pertenceArea ( p : Ponto ) : Boolean  {
+        se  (
+            p . getX ( )  >=  this . getX1 ( )  &&  p . getX ( )  <=  this . getX2 ( )
+            &&
+            p . getY ( )  >=  this . getY1 ( )  &&  p . getY ( )  <=  this . getY2 ( )
+        )  {
+            retorna  verdadeiro ;
+        }  senão  {
+            retornar  falso ;
+        }
+    }
+}
