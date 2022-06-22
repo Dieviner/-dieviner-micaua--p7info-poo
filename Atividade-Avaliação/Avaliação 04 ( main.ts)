@@ -1,0 +1,46 @@
+//
+//
+//
+//
+
+import  { Cliente }  de  "./cliente"
+import  { TipoCliente }  de  "./tipo_cliente"
+import  { Produto }  de  "./produto"
+import  { NotaFiscal }  de  "./nota_fiscal"
+import  { ItemNotaFiscal }  de  "./item_nota_fiscal"
+
+//Criar um cliente
+
+let  cliente  =  new  Cliente ( 1 ,  "José Maria da Silva" ,  100 ,  "200.345.987-11" , TipoCliente . PESSOA_FISICA ) ;
+consola . log ( "=========================" ) ;
+consola . log ( cliente ) ;
+consola . log ( "=========================" ) ;
+consola . log ( "Id  = " +  cliente.getid ( ) ) ;
+consola . log ( "Nome  = " +  cliente.getnome ( ) ) ;
+consola . log ( "Codigo  = " +  cliente.getcodigo ( ) ) ;
+consola . log ( "CnpjCpf  = " +  cliente.getcnpjcpf ( ) ) ;
+consola . log ( "TipoCliente  = " +  cliente.gettipo ( ) ) ;
+
+let  p1  =  new  Produto ( 1 ,  150 ,  "Arroz Tio João" ,  8.00 ) ;
+let  p2  =  new  Produto ( 2 ,  200 , "Feijão Janjão" ,  7,00 ) ;
+let  p3  =  new  Produto ( 3 ,  300 ,  "Farinha da Boa" ,  5,50 ) ;
+
+let  nf  =  new  NotaFiscal ( 1 ,  201 ,  cliente ) ;
+
+deixe  itnf1  =  new  ItemNotaFiscal ( 1,1,10 ,  p1 ) ; _ _  _ _ 
+deixe  itnf2  =  new  ItemNotaFiscal ( 2,2,10 ,  p2 ) ; _ _  _ _ 
+deixe  itnf3  =  new  ItemNotaFiscal ( 3,3,10 ,  p3 ) ; _  _ _  _
+
+itnf1 . valorItemNotaFiscal ( ) ;
+itnf2 . valorItemNotaFiscal ( ) ;
+itnf3 . valorItemNotaFiscal ( ) ;
+
+nf . adicionarItem ( itnf1 ) ;
+nf . adicionarItem ( itnf2 ) ;
+nf . adicionarItem ( itnf3 ) ;
+
+consola . log ( "=========================" ) ;
+consola . log ( nf ) ;
+consola . log ( "=========================" ) ;
+consola . log ( 'Valor Nota: R$'  +  nf . calcularValorNotaFiscal ( ) . toString ( ) . replace ( '.' ,  ',' ) ) ;
+consola . log ( "=========================" ) ;
