@@ -3,64 +3,64 @@
 //
 //
 
-import  {  TipoCliente  }  from  "./tipo_cliente" ;
-exportar  classe  Cliente  {
+import { TipoCliente } from "./tipo_cliente";
+export class Cliente {
 
     /* Atributos */
-     id privado : número ;
-     nome privado : string ;
-     codigo privado : número ; 
-     cnpjcpf privado : string ;
-     tipo privado : TipoCliente ;    
+    private id: number;
+    private nome: string;
+    private codigo : number; 
+    private cnpjcpf: string;
+    private tipo: TipoCliente;    
 
     /* Métodos */
 
-    /* Construtor de métodos */    
-    construtor  ( id : número ,  nome : string ,  codigo : número ,  cnpjcpf : string ,  tipo : TipoCliente )  {
-        isso . id  =  id ;
-        isso . nome  =  nome ;
-        isso . codigo  =  codigo ;
-        isso . cnpjcpf  =  cnpjcpf ;
-        isso . tipo  =  tipo ; 
+    /* Método Construtor */    
+    constructor (id : number, nome: string, codigo: number, cnpjcpf: string, tipo: TipoCliente) {
+        this.id = id;
+        this.nome = nome;
+        this.codigo = codigo;
+        this.cnpjcpf = cnpjcpf;
+        this.tipo = tipo; 
     }
 
     /* Métodos Acessores */
-    getid ( ) : numero  {
-        devolva  isso . identificação ;
+    getid(): number {
+        return this.id;
     }
 
-    getnome ( ) : string  {
-        devolva  isso . nome ;
+    getnome(): string {
+        return this.nome;
     }
 
-    getcodigo ( ) : numero  {
-        devolva  isso . código ;
+    getcodigo(): number {
+        return this.codigo;
     }
 
-    getcnpjcpf ( ) : string  {
-        devolva  isso . cnpjcpf ;
+    getcnpjcpf(): string {
+        return this.cnpjcpf;
     }
 
-    gettipo ( ) : TipoCliente  {
-        devolva  isso . tipo ;
+    gettipo(): TipoCliente {
+        return this.tipo;
     }
 
 
     /* Métodos Modificadores */     
-    setnome ( nome : string ) : void  {
-        isso . nome  =  nome ;
+    setnome(nome: string): void {
+        this.nome = nome;
     }
 
-    setcodigo ( codigo : número ) : void  {
-        isso . codigo  =  codigo ;
+    setcodigo(codigo: number): void {
+        this.codigo = codigo;
     }
 
-    setcnpjcpf ( cnpjcpf : string ) : void  {
-        isso . cnpjcpf  =  cnpjcpf ;
+    setcnpjcpf(cnpjcpf: string): void {
+        this.cnpjcpf = cnpjcpf;
     } 
 
-    settipo ( tipo : TipoCliente ) : void  {
-        isso . tipo  =  tipo ;
+    settipo(tipo: TipoCliente) : void {
+        this.tipo = tipo;
     }
 
 
